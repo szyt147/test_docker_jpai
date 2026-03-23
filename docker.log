@@ -1,0 +1,18 @@
+    3  echo docker ps
+    4  git clone https://github.com/jancarpenter/test_docker_jpai.git
+    6  cd test_docker_jpai
+   10  docker build
+   11  docker build -t kolokwium:latest
+   12  docker build -t kolokwium:latest .
+   15  docker build -t kolokwium:latest .
+   16  docker run -d -p 3000:3000 kontener kolokwium:latest
+   17  docker run -d -p 3000:3000 kontenerkolokwium:latest
+   18  docker run -d -p 3000:3000 kolokwium:latest kontener
+   19  docker ps
+   20  docker run -d -p 3000:3000 --name kontener kolokwium:latest
+   21  docker ps
+   23  docker rm -f kontener
+   24  docker ps
+   25  docker images
+   26  docker image prune
+   27  history | grep docker | tee docker.log
